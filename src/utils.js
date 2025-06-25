@@ -162,11 +162,7 @@ export async function extract(tarPath, extractPath, subdir) {
   const originalFakePlatform = process.env.__FAKE_PLATFORM__
 
   if (needWorkaround) {
-      if (originalFakePlatform != null) {
-      process.env.__FAKE_PLATFORM__ = originalFakePlatform
-    } else {
-      delete process.env.__FAKE_PLATFORM__
-    }
+    // process.env.__FAKE_PLATFORM__ = 'linux'
   }
 
   // We dynamically import `tar` to make sure the platform is faked if needed.
