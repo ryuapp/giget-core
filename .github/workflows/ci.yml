@@ -4,8 +4,7 @@ name: CI
 # can be flaky. Running manually when needed for now.
 on:
   pull_request:
-    branches:
-      - master
+    branches: [master]
 
 jobs:
   test:
